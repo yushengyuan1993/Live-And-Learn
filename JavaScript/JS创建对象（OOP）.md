@@ -83,8 +83,8 @@ Hero.prototype = {
     skill: 'AlphaStrike',
     sayName: function () { alert(this.name); }
 };
-var p1 = new Hero(); //name='Jack'
-var p2 = new Hero(); //name='Jack'
+var p1 = new Hero(); //name='MasterYi'
+var p2 = new Hero(); //name='MasterYi'
 ```
 > 这里需要注意的是原型属性和方法的共享，即所有实例中都只是引用原型中的属性方法，任何一个地方产生的改动会引起其他实例的变化。
 ### 5. 混合模式
