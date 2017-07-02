@@ -1,4 +1,5 @@
-### 获取json的 "key" 值
+# 一些关于JS的小技巧
+### 1. 获取json的 "key" 值
 > `var obj = { name: "naruto", age: 23, dad: "minato"}`
 1. 使用 `for in` 来循环 :
 ```
