@@ -13,4 +13,4 @@
   background: linear-gradient(red, blue);           /* 标准的语法 */
 }
 ```
-[效果图](./pictures/渐变1.png)
+![效果图](./pictures/渐变1.png)
