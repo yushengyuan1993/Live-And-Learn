@@ -108,3 +108,28 @@ p1.sayName();   // yasuo
 p1.skillLists;  // ['Q', 'W', 'E', 'R']
 p2.do();        // ashe use w kill MasterYi
 ```
+### 6. 使用`class`关键字
+```
+class Hero {
+    constructor(){
+        this.name = 'MasterYi';
+        this.skill = 'AlphaStrike';
+    }
+    do(enemy){
+        alert(this.name + ' use ' +  this.skill + ' kill ' + enemy)
+    }
+}
+
+let ashe = new Hero();
+ashe.do('ashe');       // MasterYi use AlphaStrike kill ashe
+
+class Yasuo extends Hero {
+    constructor(){
+        super()
+        this.name = 'yasuo'
+    }
+}
+let yasuo = new Yasuo();
+yasuo.do('timor');      // yasuo use AlphaStrike kill timor
+```
+> 这里涉及到 `ES6` 里的新特性，想了解 `ES6` 中更多的新特性，大家可以去看看 [阮一峰](http://es6.ruanyifeng.com/) 老师的书。
