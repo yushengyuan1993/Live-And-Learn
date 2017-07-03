@@ -19,10 +19,10 @@
 ```
 .box {
     height: 50px;
-    background: -webkit-linear-gradient(left, red , blue); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, red, blue); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right, red , blue); /* 标准的语法（必须放在最后） */
+    background: -webkit-linear-gradient(left, red , blue);  /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, red, blue);       /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, red, blue);     /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, red , blue);      /* 标准的语法（必须放在最后） */
 }
 ```
 > 效果图 ![效果图](./pictures/渐变2.png)
