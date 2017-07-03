@@ -2,7 +2,7 @@
 > ### CSS3 定义了两种类型的渐变（gradients）：
 1. 线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向
 2. 径向渐变（Radial Gradients）- 由它们的中心定义
-> ### 注意： IE 9 及之前的版本不支持渐变。
+#### 注意： IE 9 及之前的版本不支持渐变。
 > ### 语法：
 - `background: linear-gradient(direction, color-stop1, color-stop2, ...);`
 1. 线性渐变 - 从上到下（默认情况下）:
