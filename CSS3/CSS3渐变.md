@@ -5,7 +5,7 @@
 > ### 注意： IE 9 及之前的版本不支持渐变。
 > ### 语法：
 - `background: linear-gradient(direction, color-stop1, color-stop2, ...);`
-> 线性渐变 - 从上到下（默认情况下）:
+1. 线性渐变 - 从上到下（默认情况下）:
 ```
 .box {
   background: -webkit-linear-gradient(red, blue);   /* Safari 5.1 - 6.0 */
@@ -15,7 +15,7 @@
 }
 ```
 > 效果图 ![效果图](./pictures/渐变1.png)
-> 线性渐变 - 从左到右
+2. 线性渐变 - 从左到右
 ```
 .box {
     height: 50px;
