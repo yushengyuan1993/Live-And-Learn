@@ -13,6 +13,7 @@ for (var key in obj){
 - console.log( Object.keys(obj) ) // 输出一个数组 ["name", "age", "dad"]
 - 所以, 当我们需要某个key值时可以从当前数组中取得。
 ```
+<hr>
 ### 2. JavaScript 创建对象的几种常见的方式
 #### 1. 原始方式：
 * 对象字面量方式
