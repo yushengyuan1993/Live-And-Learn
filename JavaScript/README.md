@@ -1,14 +1,14 @@
 # 一些关于JS的小技巧
 ### 1. 获取json的 "key" 值
 > `var obj = { name: "naruto", age: 23, dad: "minato"}`
-1. 使用 `for in` 来循环 :
+#### 1. 使用 `for in` 来循环 :
 ```
 for (var key in obj){
     console.log(key) // 依次输出 "name", "age", "dad"
 }
 ```
 - 这种方法比较常见，相信大家看到这个问题时第一时间都会想到吧，但是我要介绍的是下面这个更简单的方法。
-2. 使用 `Object.keys()` 来获取 :
+#### 2. 使用 `Object.keys()` 来获取 :
 ```
 - console.log( Object.keys(obj) ) // 输出一个数组 ["name", "age", "dad"]
 - 所以, 当我们需要某个key值时可以从当前数组中取得。
@@ -152,7 +152,7 @@ yasuo.do('timor');      // yasuo use AlphaStrike kill timor
 ----
 ### 3. JS实时监听文本域的变化
 >  众所周知，使用 `onchange` 事件来监听文本域的变化是我们在开发中用到的最多的方法。但是， `onchange` 是在文本域失焦时才触发，有时候由于需求的原因，需要我们来实时监听文本域的变化，除了使用`keydown`和`keyup`外，我们还可以:
-1. 使用 `onpropertychange` 
+### 1. 使用 `onpropertychange` 
 ```
 <input type="text" id="txt">
 
@@ -160,7 +160,7 @@ $("#ysy").bind('input propertychange', function() {
     console.log(new Date().getTime()); 
 });
 ```
-2. 使用 `oninput` 
+### 2. 使用 `oninput` 
 ```
 document.getElementById('txt').oninput = function(){
     console.log(this.value);
