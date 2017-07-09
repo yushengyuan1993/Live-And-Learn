@@ -194,7 +194,7 @@ checkType(3+'')             // string
 let ary = new Array();
 ```
 - 若参数只有一个，且为数字，`let ary1 = new Array(3)`，这是其实我们是在指定数组的长度的，即 `ary1.length === 3`。`ary1[0]`则为`undefined`;
-- 当定义`let ary2 = new Array(1, 2)`时，此时`ary2 === [1, 2, 3]`;
+- 当定义`let ary2 = new Array(1, 2, 3)`时，此时`ary2 === [1, 2, 3]`;
 2. JS中的数组定义非常的自由：
 >> 看下面的例子：
 ```
