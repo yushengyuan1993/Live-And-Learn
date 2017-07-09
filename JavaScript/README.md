@@ -210,9 +210,29 @@ ary2.length = 3;
 console.log(ary2);      // [1, 2, 3]
 ```
 #### 常用的数组API
-1. 万能方法 `splice`
-> aplice方法允许我们对数组进行插入、替换和删除的功能，简直完美呀！
-删除：
+1. 万能方法 `splice()`
+-  splice()方法允许我们对数组进行插入、替换和删除的功能。**splice方法返回一个有删除元素组成的新数组，没有删除时则返回一个空数组**，简直完美呀！
+- `splice()`方法接受三个参数，**第一个**为开始索引，**第二个**为删除元素的位置，**第三个**为插入的元素，可以为第二个，当然也可省略（表示删除元素）。
+- 通过以下三个demo了解以下具体的用法吧：
+>> 插入:
 ```
-let ary1 = [""]
+let ary1 = ["first", "second", "third", "forth", "fifth"];
+let ary2 = ary1.splice(1,0,"add1");
+console.log(ary1);      [ 'first', 'add1', 'second', 'third', 'forth', 'fifth' ]
+console.log(ary2);      [] 没有删除则放回一个空数组
 ```
+>> 替换：
+```
+let ary1 = ["first", "second", "third", "forth", "fifth"];
+let ary2 = ary1.splice(1,1,"replace");
+console.log(ary1);      [ 'first', "replace, 'third', 'forth', 'fifth' ]
+console.log(ary2);      ["second"] 返回被删除(即替换)的数组
+```
+>> 删除：
+```
+let ary1 = ["first", "second", "third", "forth", "fifth"];
+let ary2 = ary1.splice(1,3);
+console.log(ary1);      ["second", "third", "forth"]
+console.log(ary2);      ["first", "fifth"]
+```
+2. `slice()` 方法
