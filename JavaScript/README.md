@@ -213,7 +213,8 @@ console.log(ary2);      // [1, 2, 3]
 1. 万能方法 `splice()`
 -  splice()方法允许我们对数组进行插入、替换和删除的功能。**splice方法返回一个有删除元素组成的新数组，没有删除时则返回一个空数组**，简直完美呀！
 - `splice()`方法接受三个参数，**第一个**为开始索引，**第二个**为删除元素的位置，**第三个**为插入的元素，可以为第二个，当然也可省略（表示删除元素）。
-- 通过以下三个demo了解以下具体的用法吧：
+- `splice()`方法会修改原数组！
+- 通过以下三个demo了解一下具体的用法吧：
 >> 插入:
 ```
 let ary1 = ["first", "second", "third", "forth", "fifth"];
@@ -236,3 +237,33 @@ console.log(ary1);      ["second", "third", "forth"]
 console.log(ary2);      ["first", "fifth"]
 ```
 2. `slice()` 方法
+- `slice()` 方法可以接受两个参数(start, end)；
+- `slice()` 方法可从已有的数组中返回选定的元素；
+- `slice()` 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分；
+- `slice()` 方法**不会改变原始数组**，而是返回一个新数组。
+>> demo1:
+```
+let ary = ["first", "second", "third", "forth", "fifth"];
+console.log (ary.slice(1,2) );      // ["second"]
+let ary1 = ary.slice(1,2);          // ["second"]
+let ary2 = ary.slice(1,3);          // ["second", "third"]
+console.log(ary);                   // ["first", "second", "third", "forth", "fifth"];
+```
+>> demo2:
+```
+let ary = ["first", "second", "third", "forth", "fifth"];
+console.log(ary.slice(1,2));    // ["second"]
+console.log(ary.slice(1,3));    // ["second", "third"]
+console.log(ary));              // ["first", "second", "third", "forth", "fifth"];
+```
+>> demo3:
+```
+let ary = ["first", "second", "third", "forth", "fifth"];
+let ary1 = ary.slice();     // ["first", "second", "third", "forth", "fifth"];
+let ary2 = ary.slice(0);     // ["first", "second", "third", "forth", "fifth"];
+
+ary === ary1;       // false
+ary === ary2;       // false
+ary1 === ary2;      // false
+```
+**看出来啥猫腻没，这不是深复制一个数据吗！**
