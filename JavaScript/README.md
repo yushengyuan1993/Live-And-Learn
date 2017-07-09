@@ -187,3 +187,32 @@ checkType(1)                // number
 checkType(+'3')             // number
 checkType(3+'')             // string
 ```
+### JS中的数组
+> #### 关于数组的一些认识
+1. 使用构造器函数创建数组时:
+```
+let ary = new Array();
+```
+- 若参数只有一个，且为数字，`let ary1 = new Array(3)`，这是其实我们是在指定数组的长度的，即 `ary1.length === 3`。`ary1[0]`则为`undefined`;
+- 当定义`let ary2 = new Array(1, 2)`时，此时`ary2 === [1, 2, 3]`;
+2. JS中的数组定义非常的自由：
+>> 看下面的例子：
+```
+let ary = [1, 2, 3];
+ary[5] = 5;
+console.log(ary);           // [1,2,3,undefined,undefined,5]
+console.log(ary.length);    // 6
+```
+>> 再看：
+```
+let ary2 = [1, 2, 3, 4, 5];
+ary2.length = 3;
+console.log(ary2);      // [1, 2, 3]
+```
+#### 常用的数组API
+1. 万能方法 `splice`
+> aplice方法允许我们对数组进行插入、替换和删除的功能，简直完美呀！
+删除：
+```
+let ary1 = [""]
+```
