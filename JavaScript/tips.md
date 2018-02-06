@@ -1,9 +1,9 @@
 ### 总结（记录）一些`codeing`过程中用到的`tip`
-#### <a href="#getKey">#1 获取json的`key`值</a>
-#### <a href="#input">#2 JS实时监听文本域的变化</a>
-#### <a name="#checkType">#3 JavaScript类型检验</a>
+#### <a href="#getKey">1. 获取json的`key`值</a>
+#### <a href="#input">2. JS实时监听文本域的变化</a>
+#### <a href="#checkType">3. JavaScript类型检验</a>
 ---
-#### <a name="getKey">#1. </a>获取json的 `key` 值
+#### <a name="getKey">1. </a>获取json的 `key` 值
 ```javascript
 var obj = { name: "naruto", age: 23, dad: "minato"}
 ````
@@ -20,7 +20,7 @@ for (var key in obj){
 - 所以, 当我们需要某个key值时可以从当前数组中取得。
 ```
 ---
-#### <a name="input">#2. JS实时监听文本域的变化</a>
+#### <a name="input">2. JS实时监听文本域的变化</a>
 >  众所周知，使用 `onchange` 事件来监听文本域的变化是我们在开发中用到的最多的方法。但是， `onchange` 是在文本域失焦时才触发，有时候由于需求的原因，需要我们来实时监听文本域的变化，除了使用`keydown`和`keyup`外，我们还可以:
 ##### 2.1. 使用 `onpropertychange` 
 ```javascript
@@ -41,7 +41,7 @@ document.getElementById('txt').oninput = function(){
 2. `oninput`事件与`onpropertychange`事件的区别：`oninput`事件是IE之外的大多数浏览器支持的事件，在value改变时触发，实时的，即每增加或删除一个字符就会触发，然而通过js改变value时，却不会触发；`onpropertychange`事件是任何属性改变都会触发的，而`oninput`却只在value改变时触发，`oninput`要通过`addEventListener()`来注册，`onpropertychange`注册方式跟一般事件一样。（此处都是指在js中动态绑定事件，以实现内容与行为分离）>
 3. `oninput`与`onpropertychange`失效的情况：  （1）`oninput`事件：a). 当脚本中改变value时，不会触发；b).从浏览器的自动下拉提示中选取时，不会触发。  （2）`onpropertychange`事件：当input设置为`disable=true`后，onpropertychange不会触发。
 ---
-#### <a name="checkType">#3. JavaScript类型检验</a>
+#### <a name="checkType">3. JavaScript类型检验</a>
 > 一个简单有用的js类型检验的方法
 ```javascript
 function checkType(sth) {
