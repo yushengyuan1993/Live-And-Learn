@@ -153,7 +153,7 @@ yasuo.do('timor');      // yasuo use AlphaStrike kill timor
 ### 3. JS实时监听文本域的变化
 >  众所周知，使用 `onchange` 事件来监听文本域的变化是我们在开发中用到的最多的方法。但是， `onchange` 是在文本域失焦时才触发，有时候由于需求的原因，需要我们来实时监听文本域的变化，除了使用`keydown`和`keyup`外，我们还可以:
 #### 1. 使用 `onpropertychange` 
-```
+```javascript
 <input type="text" id="txt">
 
 $("#ysy").bind('input propertychange', function() {  
@@ -161,7 +161,7 @@ $("#ysy").bind('input propertychange', function() {
 });
 ```
 #### 2. 使用 `oninput` 
-```
+```javascript
 document.getElementById('txt').oninput = function(){
     console.log(this.value);
 }
@@ -173,7 +173,7 @@ document.getElementById('txt').oninput = function(){
 ----
 ### 4. JavaScript类型检验
 > 介绍一个简单有用的js类型检验的方法
-```
+```javascript
 function checkType(sth) {
     return Object.prototype.toString.call(o)
     .match(/(\w+)\]$/)[1]
@@ -190,21 +190,21 @@ checkType(3+'')             // string
 ### 5. JS中的数组
 > #### 关于数组的一些认识
 1. 使用构造器函数创建数组时:
-```
+```javascript
 let ary = new Array();
 ```
 - 若参数只有一个，且为数字，`let ary1 = new Array(3)`，这是其实我们是在指定数组的长度的，即 `ary1.length === 3`。`ary1[0]`则为`undefined`;
 - 当定义`let ary2 = new Array(1, 2, 3)`时，此时`ary2 === [1, 2, 3]`;
 2. JS中的数组定义非常的自由：
 >> 看下面的例子：
-```
+```javascript
 let ary = [1, 2, 3];
 ary[5] = 5;
 console.log(ary);           // [1,2,3,undefined,undefined,5]
 console.log(ary.length);    // 6
 ```
 >> 再看：
-```
+```javascript
 let ary2 = [1, 2, 3, 4, 5];
 ary2.length = 3;
 console.log(ary2);      // [1, 2, 3]
@@ -216,21 +216,21 @@ console.log(ary2);      // [1, 2, 3]
 - `splice()`方法会修改原数组！
 - 通过以下三个demo了解一下具体的用法吧：
 >> 插入:
-```
+```javascript
 let ary1 = ["first", "second", "third", "forth", "fifth"];
 let ary2 = ary1.splice(1,0,"add1");
 console.log(ary1);      [ 'first', 'add1', 'second', 'third', 'forth', 'fifth' ]
 console.log(ary2);      [] 没有删除则放回一个空数组
 ```
 >> 替换：
-```
+```javascript
 let ary1 = ["first", "second", "third", "forth", "fifth"];
 let ary2 = ary1.splice(1,1,"replace");
 console.log(ary1);      [ 'first', "replace, 'third', 'forth', 'fifth' ]
 console.log(ary2);      ["second"] 返回被删除(即替换)的数组
 ```
 >> 删除：
-```
+```javascript
 let ary1 = ["first", "second", "third", "forth", "fifth"];
 let ary2 = ary1.splice(1,3);
 console.log(ary1);      ["second", "third", "forth"]
@@ -242,7 +242,7 @@ console.log(ary2);      ["first", "fifth"]
 - `slice()` 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分；
 - `slice()` 方法**不会改变原始数组**，而是返回一个新数组。
 >> demo1:
-```
+```javascript
 let ary = ["first", "second", "third", "forth", "fifth"];
 console.log (ary.slice(1,2) );      // ["second"]
 let ary1 = ary.slice(1,2);          // ["second"]
@@ -250,14 +250,14 @@ let ary2 = ary.slice(1,3);          // ["second", "third"]
 console.log(ary);                   // ["first", "second", "third", "forth", "fifth"];
 ```
 >> demo2:
-```
+```javascript
 let ary = ["first", "second", "third", "forth", "fifth"];
 console.log(ary.slice(1,2));    // ["second"]
 console.log(ary.slice(1,3));    // ["second", "third"]
 console.log(ary));              // ["first", "second", "third", "forth", "fifth"];
 ```
 >> demo3:
-```
+```javascript
 let ary = ["first", "second", "third", "forth", "fifth"];
 let ary1 = ary.slice();     // ["first", "second", "third", "forth", "fifth"];
 let ary2 = ary.slice(0);     // ["first", "second", "third", "forth", "fifth"];
