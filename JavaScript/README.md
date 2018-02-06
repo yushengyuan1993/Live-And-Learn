@@ -148,7 +148,7 @@ class Yasuo extends Hero {
 let yasuo = new Yasuo();
 yasuo.do('timor');      // yasuo use AlphaStrike kill timor
 ```
-> 这里涉及到 `ES6` 里的新特性，想了解 `ES6` 中更多的新特性，大家可以去看看 [阮一峰](http://es6.ruanyifeng.com/) 老师的书。
+> 这里涉及到 `ES6` 里的新特性，想了解 `ES6` 中更多的新特性，大家可以去看看 [阮一峰](http://es6.ruanyifeng.com/) 老师的博客。
 ----
 ### 3. JS实时监听文本域的变化
 >  众所周知，使用 `onchange` 事件来监听文本域的变化是我们在开发中用到的最多的方法。但是， `onchange` 是在文本域失焦时才触发，有时候由于需求的原因，需要我们来实时监听文本域的变化，除了使用`keydown`和`keyup`外，我们还可以:
